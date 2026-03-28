@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Home Concierge Systems | Estate Stewardship</title>
+    <style>
+        :root { --gold: #c5a059; --regal: #1a1a1a; --paper: #fafafa; }
+        body { font-family: 'Garamond', serif; line-height: 1.8; color: var(--regal); margin: 0; background-color: var(--paper); }
+        
+        /* Hero Section with Visual */
+        .hero { 
+            height: 60vh; 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=1600&q=80'); 
+            background-size: cover; background-position: center; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px;
+        }
+        .hero h1 { letter-spacing: 8px; text-transform: uppercase; font-size: 2.2rem; margin-bottom: 5px; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        h2 { font-weight: normal; text-transform: uppercase; letter-spacing: 3px; color: var(--regal); border-bottom: 1px solid var(--gold); padding-bottom: 15px; margin-top: 80px; text-align: center; }
+        
+        /* Service Layout with Images */
+        .service-row { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
+        .service-row:nth-child(even) { flex-direction: row-reverse; }
+        .service-text { flex: 1; }
+        .service-img { flex: 1; height: 400px; background-size: cover; background-position: center; border: 1px solid #ddd; }
+        
+        .box-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+        .box { border: 1px solid #eee; padding: 25px; background: white; text-align: center; }
+        
+        .protocol { border: 1px solid var(--gold); padding: 40px; margin-top: 80px; background: white; }
+        .cta { display: block; width: 300px; margin: 60px auto; padding: 20px; background: var(--regal); color: white; text-align: center; text-decoration: none; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; border: 1px solid var(--regal); transition: 0.4s; }
+        .cta:hover { background: transparent; color: var(--regal); }
+
+        @media (max-width: 768px) { .service-row { flex-direction: column !important; } .service-img { width: 100%; height: 300px; } }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Royal Home Concierge Systems</h1>
+    <p style="letter-spacing: 2px; font-style: italic;">Architectural Stewardship for the Modern Estate</p>
+</div>
+
+<div class="container">
+    
+    <section>
+        <h2>The Philosophy</h2>
+        <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">We do not simply organize; we architect the environment. Our mission is to provide museum-grade stewardship for the estate’s most personal assets, ensuring your home evolves at the pace of your lifestyle.</p>
+    </section>
+
+    <section>
+        <h2>The Stewardship Tiers</h2>
+        <div class="box-grid">
+            <div class="box"><strong>Level I</strong><br>The Essential<br><small>Bi-Weekly</small></div>
+            <div class="box"><strong>Level II</strong><br>The Premier<br><small>Bi-Weekly + Bonus</small></div>
+            <div class="box"><strong>Level III</strong><br>The Sovereign<br><small>Weekly Immersion</small></div>
+            <div class="box"><strong>Level IV</strong><br>The Couture<br><small>Global Management</small></div>
+        </div>
+    </section>
+
+    <h2>Specialized Commissions</h2>
+    
+    <div class="service-row">
+        <div class="service-text">
+            <h3>The Heir’s Heritage</h3>
+            <p>From Nursery Prep to growth-phase wardrobe auditing. We ensure the estate’s youngest members have systems that grow with them.</p>
+        </div>
+        <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80');"></div>
+    </div>
+
+    <div class="service-row">
+        <div class="service-text">
+            <h3>Digital Inventory Architecture</h3>
+            <p>Our Masterwork service. A complete digital vault of your collection, including bespoke ensemble styling from your existing assets.</p>
+        </div>
+        <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&w=800&q=80');"></div>
+    </div>
+
+    <div class="service-row">
+        <div class="service-text">
+            <h3>Inquire Within</h3>
+            <p>Bespoke system architecture for the <strong>Kitchen Pantry</strong> and <strong>Home Office</strong>. Treated as individual project consultations to align with your estate's specific workflow.</p>
+        </div>
+        <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=800&q=80');"></div>
+    </div>
+
+    <section class="protocol">
+        <h3 style="text-align: center; text-transform: uppercase; letter-spacing: 2px;">The Royal Protocol</h3>
+        <p><strong>Privacy:</strong> All curators are bound by strict NDAs. <br>
+           <strong>8-Hour Window:</strong> A standard professional service day. <br>
+           <strong>Residency Caps:</strong> 12 days/month (Tiers) or 5 days/month (Projects). <br>
+           <strong>Logistics:</strong> We are editors, not couriers; off-site transport is managed by estate staff.</p>
+    </section>
+
+    <a href="mailto:INQUIRIES@YOURDOMAIN.COM" class="cta">Request a Private Consultation</a>
+
+</div>
+
+<footer style="text-align: center; padding: 40px; font-size: 0.7rem; color: #999; text-transform: uppercase; letter-spacing: 2px;">
+    &copy; 2026 Royal Home Concierge Systems. Private & Confidential.
+</footer>
+
+</body>
+</html>
