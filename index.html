@@ -9,156 +9,160 @@
         * { box-sizing: border-box; }
         body { font-family: 'Garamond', serif; line-height: 1.6; color: var(--regal); margin: 0; background-color: var(--paper); scroll-behavior: smooth; }
         
-        nav { position: fixed; top: 0; width: 100%; background: white; border-bottom: 1px solid #eee; z-index: 1000; padding: 15px 0; display: flex; justify-content: center; gap: 20px; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
+        nav { position: fixed; top: 0; width: 100%; background: white; border-bottom: 1px solid #eee; z-index: 1000; padding: 15px 0; display: flex; justify-content: center; gap: 30px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
         nav a { text-decoration: none; color: var(--regal); font-weight: bold; }
+        nav a:hover { color: var(--gold); }
 
+        /* HERO - LUXURY CLOSET VISUAL */
         .hero { 
-            height: 60vh; 
+            height: 70vh; 
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=1600&q=80'); 
             background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;
         }
-        .hero h1 { letter-spacing: 8px; text-transform: uppercase; font-size: 1.8rem; margin: 0; padding: 0 20px; }
+        .hero h1 { letter-spacing: 12px; text-transform: uppercase; font-size: 2.2rem; margin: 0; padding: 0 10px; }
+        .hero p { font-style: italic; letter-spacing: 2px; margin-top: 10px; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
         h2 { font-weight: normal; text-transform: uppercase; letter-spacing: 4px; color: var(--regal); border-bottom: 1px solid var(--gold); padding-bottom: 15px; margin-bottom: 40px; text-align: center; }
 
         /* TIER CARDS */
         .tier-card { border: 1px solid #eee; background: white; margin-bottom: 15px; cursor: pointer; transition: 0.3s; }
         .tier-card:hover { border-color: var(--gold); }
         .tier-header { padding: 25px; display: flex; justify-content: space-between; align-items: center; }
-        .tier-header h3 { margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
-        .tier-content { max-height: 0; overflow: hidden; transition: 0.5s ease-out; background: #fafafa; padding: 0 25px; }
-        .tier-card.active .tier-content { max-height: 1000px; padding: 35px 25px; border-top: 1px solid #eee; }
+        .tier-header h3 { margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; }
+        .tier-content { max-height: 0; overflow: hidden; transition: 0.5s ease-out; padding: 0 25px; }
+        .tier-card.active .tier-content { max-height: 800px; padding: 40px 25px; border-top: 1px solid #eee; background-color: #fafafa; }
+
+        /* VISUAL SECTION - ORGANIZED LAUNDRY/HOME VISUAL */
+        .vis-comm { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1600&q=80'); 
+            background-size: cover; background-position: center; background-attachment: fixed; color: white; padding: 100px 0;
+        }
 
         .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-box { border: 1px solid #ddd; padding: 30px; background: white; }
+        .service-box { border: 1px solid rgba(255,255,255,0.2); padding: 30px; background: rgba(255,255,255,0.95); color: var(--regal); transition: 0.3s; }
+        .service-box:hover { border-color: var(--gold); transform: translateY(-5px); }
         .service-box h3 { color: var(--gold); text-transform: uppercase; font-size: 0.9rem; border-bottom: 1px solid #eee; padding-bottom: 10px; }
 
-        .faq-item { border-bottom: 1px solid #eee; padding: 15px 0; cursor: pointer; }
-        .faq-question { font-weight: bold; display: flex; justify-content: space-between; font-size: 0.9rem; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s; color: var(--gray); font-size: 0.85rem; margin-top: 10px; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; cursor: pointer; }
+        .faq-question { font-weight: bold; display: flex; justify-content: space-between; font-size: 0.95rem; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s; color: var(--gray); font-size: 0.9rem; margin-top: 10px; }
         .faq-item.active .faq-answer { max-height: 200px; }
 
-        .legal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: #f4f4f4; padding: 40px; margin-top: 50px; font-size: 0.8rem; }
-        
-        .cta-btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: var(--regal); color: white; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.65rem; border: 1px solid var(--regal); }
-        
-        #backToTop { position: fixed; bottom: 20px; right: 20px; background: var(--gold); color: white; border: none; padding: 10px; cursor: pointer; display: none; z-index: 1000; font-size: 0.6rem; text-transform: uppercase; }
+        /* TERMS MODAL STYLES */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); overflow-y: auto; }
+        .modal-content { background-color: var(--paper); margin: 5% auto; padding: 40px; width: 95%; max-width: 850px; line-height: 1.8; }
+        .close-modal { color: var(--gold); float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .modal-content h3 { text-transform: uppercase; letter-spacing: 3px; border-bottom: 1px solid var(--gold); padding-bottom: 10px; }
+        .modal-content h4 { text-transform: uppercase; font-size: 0.8rem; margin-top: 25px; letter-spacing: 1px; color: var(--regal); }
+        .modal-content p, .modal-content li { font-size: 0.85rem; color: #444; }
 
-        @media (max-width: 768px) { .legal-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 1.4rem; } }
+        .cta-btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: var(--regal); color: white; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; border: 1px solid var(--regal); }
+        .cta-btn:hover { background: transparent; color: var(--regal); }
+        #backToTop { position: fixed; bottom: 30px; right: 30px; background: var(--gold); color: white; border: none; padding: 10px 15px; cursor: pointer; display: none; z-index: 1000; font-size: 0.6rem; text-transform: uppercase; }
+
+        footer a { color: #999; text-decoration: none; margin: 0 10px; cursor: pointer; }
+        footer a:hover { color: var(--gold); }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 1.4rem; } .vis-comm { background-attachment: scroll; } }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="#philosophy">Philosophy</a>
-    <a href="#tiers">Tiers</a>
+    <a href="#tiers">Residency</a>
     <a href="#commissions">Commissions</a>
     <a href="#faq">FAQs</a>
 </nav>
 
 <div class="hero">
     <h1>Royal Home Concierge Systems</h1>
-    <p style="font-style: italic; letter-spacing: 2px;">Architectural Stewardship for the Modern Estate</p>
+    <p>Systèmes de Conciergerie Royale</p>
 </div>
 
 <div class="container" id="philosophy">
     <h2>The Philosophy</h2>
-    <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
-        We provide museum-grade stewardship for the private estate. Our curators bridge the gap between housekeeping and asset management, implementing systems that prioritize architectural order and functional logic.
+    <p style="text-align: center; font-size: 1.2rem; max-width: 850px; margin: 0 auto;">
+        Providing museum-grade stewardship for the private estate. We bridge the gap between housekeeping and asset management, implementing systems of architectural order and functional logic.
     </p>
 </div>
 
 <div class="container" id="tiers">
     <h2>Residency Tiers</h2>
-    <p style="text-align: center; font-style: italic; margin-bottom: 25px; font-size: 0.8rem;">Select a Tier to reveal the System Protocol</p>
     
     <div class="tier-card" onclick="this.classList.toggle('active')">
-        <div class="tier-header">
-            <h3>Level I | The Essential</h3>
-            <span style="color: var(--gold); font-size: 0.7rem;">Bi-Weekly Residency</span>
-        </div>
+        <div class="tier-header"><h3>Level I | The Essential</h3><span style="color: var(--gold);">Bi-Weekly</span></div>
         <div class="tier-content">
-            <p><strong>Primary Focus:</strong> Maintenance of core wardrobe architecture.</p>
+            <p><strong>Primary Focus:</strong> Routine maintenance of core wardrobe architecture.</p>
             <ul>
-                <li>Bi-Weekly Asset Restoration & Aesthetic Alignment</li>
+                <li>Bi-Weekly Asset Restoration & Alignment</li>
                 <li>Dry Cleaning, Tailoring & Repair Logistics</li>
                 <li>Quarterly Seasonal Inventory Rotation</li>
-                <li>Archival Preservation of Evening Wear & Leathers</li>
             </ul>
-            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Residency Inquiry: Level I Essential" class="cta-btn">Request Residency</a>
+            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Residency Inquiry: Level I" class="cta-btn">Request Residency</a>
         </div>
     </div>
 
     <div class="tier-card" onclick="this.classList.toggle('active')">
-        <div class="tier-header">
-            <h3>Level II | The Premier</h3>
-            <span style="color: var(--gold); font-size: 0.7rem;">Bi-Weekly + Bonus Visit</span>
-        </div>
+        <div class="tier-header"><h3>Level II | The Premier</h3><span style="color: var(--gold);">Bi-Weekly + Bonus</span></div>
         <div class="tier-content">
-            <p><strong>Primary Focus:</strong> Enhanced maintenance with additional bandwidth for specialized deep-care resets.</p>
+            <p><strong>Primary Focus:</strong> Enhanced bi-weekly maintenance with an additional float day for deep resets.</p>
             <ul>
-                <li>All Essential services plus one annual Signature Bonus Visit</li>
-                <li>Comprehensive Footwear & Handbag Restoration Protocols</li>
-                <li>System Optimization for secondary storage & dressing suites</li>
-                <li>Specialized Holiday or Event Wardrobe Staging</li>
+                <li>Includes all Essential services plus one annual Bonus Visit</li>
+                <li>Footwear & Handbag Restoration Protocols</li>
+                <li>Archive Preservation of Evening Wear & Couture</li>
             </ul>
-            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Residency Inquiry: Level II Premier" class="cta-btn">Request Residency</a>
+            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Residency Inquiry: Level II" class="cta-btn">Request Residency</a>
         </div>
     </div>
 
     <div class="tier-card" onclick="this.classList.toggle('active')">
-        <div class="tier-header">
-            <h3>Level III | The Sovereign</h3>
-            <span style="color: var(--gold); font-size: 0.7rem;">Weekly Residency</span>
-        </div>
+        <div class="tier-header"><h3>Level III | The Sovereign</h3><span style="color: var(--gold);">Weekly</span></div>
         <div class="tier-content">
-            <p><strong>Primary Focus:</strong> Total estate immersion for a high-frequency, zero-friction lifestyle.</p>
+            <p><strong>Primary Focus:</strong> Total estate immersion for high-frequency lifestyles.</p>
             <ul>
                 <li>Weekly Ensemble Pre-Styling & Wardrobe Staging</li>
-                <li>Real-Time Digital Cataloging of All New Acquisitions</li>
-                <li>Travel Manifests & Departure/Return Logistics Management</li>
-                <li>Direct Tablet Integration for Digital Wardrobe Browsing</li>
+                <li>Real-Time Cataloging of New Luxury Acquisitions</li>
+                <li>Travel Manifests & Departure/Return Logistics</li>
             </ul>
-            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Residency Inquiry: Level III Sovereign" class="cta-btn">Request Residency</a>
+            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Residency Inquiry: Level III" class="cta-btn">Request Residency</a>
         </div>
     </div>
 
     <div class="tier-card" onclick="this.classList.toggle('active')">
-        <div class="tier-header">
-            <h3>Level IV | The Couture</h3>
-            <span style="color: var(--gold); font-size: 0.7rem;">Global / Multi-Estate</span>
-        </div>
+        <div class="tier-header"><h3>Level IV | The Couture</h3><span style="color: var(--gold);">Global</span></div>
         <div class="tier-content">
-            <p><strong>Primary Focus:</strong> Comprehensive stewardship for principals with multi-residence lifestyles.</p>
+            <p><strong>Primary Focus:</strong> Multi-residence stewardship and global asset transition.</p>
             <ul>
-                <li>Standardized Organizational Systems across global properties</li>
-                <li>Seasonal Travel Transitions & "Closet Syncing" between estates</li>
-                <li>Dedicated Curator travel for international estate management</li>
+                <li>Standardized Systems across global properties</li>
+                <li>Seasonal Travel Transitions & Closet Syncing</li>
                 <li>Bespoke residency frequency based on principal location</li>
             </ul>
-            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Residency Inquiry: Level IV Couture" class="cta-btn">Request Residency</a>
+            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Residency Inquiry: Level IV" class="cta-btn">Request Residency</a>
         </div>
     </div>
 </div>
 
-<div class="container" id="commissions">
-    <h2>Signature Commissions</h2>
-    <div class="service-grid">
-        <div class="service-box">
-            <h3>Digital Inventory</h3>
-            <p>Full digital blueprint of your collection. Includes 20 bespoke stylings curated from your assets in a private vault.</p>
-            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Quote Request: Digital Inventory" class="cta-btn">Request a Quote</a>
-        </div>
-        <div class="service-box">
-            <h3>The Heir’s Heritage</h3>
-            <p>Architectural Nursery Prep and monthly growth-phase wardrobe auditing for the estate's youngest members.</p>
-            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Quote Request: Heir's Heritage" class="cta-btn">Request a Quote</a>
-        </div>
-        <div class="service-box">
-            <h3>Kitchen & Office</h3>
-            <p>Architectural workflow and inventory control for functional estate spaces, ensuring visual and operational serenity.</p>
-            <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Quote Request: Kitchen/Office" class="cta-btn">Request a Quote</a>
+<div class="vis-comm" id="commissions">
+    <div class="container">
+        <h2 style="color: white; border-color: rgba(255,255,255,0.4);">Signature Commissions</h2>
+        <div class="service-grid">
+            <div class="service-box">
+                <h3>Digital Inventory</h3>
+                <p>Full digital blueprint of your collection. Private cloud vault access for digital styling.</p>
+                <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Quote Request: Digital Inventory" class="cta-btn">Request Quote</a>
+            </div>
+            <div class="service-box">
+                <h3>The Heir’s Heritage</h3>
+                <p>Nursery Prep and growth-phase wardrobe auditing for the estate's youngest members.</p>
+                <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Quote Request: Heir's Heritage" class="cta-btn">Request Quote</a>
+            </div>
+            <div class="service-box">
+                <h3>Kitchen & Office</h3>
+                <p>Architectural workflow and inventory control for functional estate spaces.</p>
+                <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Quote Request: Kitchen/Office" class="cta-btn">Request Quote</a>
+            </div>
         </div>
     </div>
 </div>
@@ -166,39 +170,46 @@
 <div class="container" id="faq">
     <h2>FAQs</h2>
     <div class="faq-item" onclick="this.classList.toggle('active')">
-        <div class="faq-question">What is a Home Systems Curator? <span>+</span></div>
-        <div class="faq-answer">We are architects of order. Unlike traditional staff, we build and maintain the structural systems that govern your most personal assets.</div>
+        <div class="faq-question">What is a Systems Curator? <span>+</span></div>
+        <div class="faq-answer">We are architects of order. We build the structural systems that govern your home's most personal assets.</div>
     </div>
     <div class="faq-item" onclick="this.classList.toggle('active')">
-        <div class="faq-question">How does the residency cap work? <span>+</span></div>
-        <div class="faq-answer">To ensure high-touch exclusivity, Stewardship Clients are limited to 12 service days per month. Single-service projects are capped at 5 days.</div>
-    </div>
-    <div class="faq-item" onclick="this.classList.toggle('active')">
-        <div class="faq-question">Do you handle physical transport? <span>+</span></div>
-        <div class="faq-answer">We perform the "Curated Edit" to identify items for removal. Physical transport and donation logistics are managed by the estate’s secondary staff.</div>
+        <div class="faq-question">How does the 12-day cap work? <span>+</span></div>
+        <div class="faq-answer">Tiers are capped at 12 residency days per month per estate. Signature projects are capped at 5 days.</div>
     </div>
 </div>
 
-<div class="legal-grid">
-    <div>
-        <h4>The Protocol</h4>
-        <p><strong>NDA & Privacy:</strong> All curators are bound by strict legal privacy contracts. Estate data never leaves the residence.</p>
-        <p><strong>The 8-Hour Window:</strong> Each service day is a dedicated professional residency of 8 hours.</p>
-    </div>
-    <div>
-        <h4>Terms</h4>
-        <p><strong>Scheduling:</strong> 72-hour notice required for all cancellations. Late changes are billed at the full daily rate.</p>
-        <p><strong>Materials:</strong> Archival materials (hangers, bins, labels) are curated and billed separately as estate assets.</p>
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeTerms()">&times;</span>
+        <h3>Terms & Protocols</h3>
+        <p style="font-style: italic; color: var(--gold);">Revised: March 2026</p>
+        <h4>1. Scope</h4>
+        <p>Royal Home Concierge Systems provides estate curation and asset management. We are system architects; we are not a cleaning service or licensed appraiser.</p>
+        <h4>2. Residency & Service Caps</h4>
+        <ul>
+            <li><strong>Stewardship Tiers:</strong> Capped at 12 residency days per month per estate.</li>
+            <li><strong>Signature Commissions:</strong> Project-based services are strictly capped at 5 service days per month.</li>
+        </ul>
+        <h4>3. The Protocol (Privacy)</h4>
+        <p>All curators are bound by strict legal NDAs. No imagery or estate data leaves the residence.</p>
+        <h4>4. Liability</h4>
+        <p>Claims must be reported in writing within 24 hours of session conclusion. Liability limited to the cost of the residency session in question.</p>
     </div>
 </div>
 
 <button id="backToTop" onclick="window.scrollTo(0, 0)">Top</button>
 
-<footer style="text-align: center; padding: 50px; font-size: 0.65rem; color: #999; text-transform: uppercase; letter-spacing: 2px;">
-    &copy; 2026 Royal Home Concierge Systems. Private & Confidential.
+<footer style="text-align: center; padding: 60px; font-size: 0.65rem; color: #999; text-transform: uppercase; letter-spacing: 2px;">
+    &copy; 2026 Royal Home Concierge Systems. <br><br>
+    <a onclick="openTerms()">Terms & Protocols</a> | <a href="mailto:RoyalHCSFrontDesk@proton.mail">Contact</a>
 </footer>
 
 <script>
+    function openTerms() { document.getElementById("termsModal").style.display = "block"; }
+    function closeTerms() { document.getElementById("termsModal").style.display = "none"; }
+    window.onclick = function(event) { if (event.target == document.getElementById("termsModal")) { closeTerms(); } }
+
     window.onscroll = function() {
         var btn = document.getElementById("backToTop");
         if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
@@ -211,6 +222,3 @@
 
 </body>
 </html>
-
-
-
