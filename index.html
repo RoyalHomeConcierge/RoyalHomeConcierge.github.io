@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Home Curation Systems by Liz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #D4AF37;
@@ -12,7 +13,7 @@
             --white: #ffffff;
         }
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Playfair Display', serif; /* Updated Font */
             margin: 0;
             background-color: var(--white);
             color: var(--black);
@@ -21,81 +22,96 @@
         header {
             background-color: var(--black);
             color: var(--gold);
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 4px solid var(--gold);
+            border-bottom: 5px solid var(--gold);
         }
         header h1 {
             margin: 0;
-            font-size: 2.2em;
-            letter-spacing: 3px;
+            font-size: 3em;
+            letter-spacing: 5px;
             text-transform: uppercase;
+            font-weight: 700;
         }
         header p {
-            margin: 10px 0 30px 0;
-            font-size: 1.1em;
+            margin: 15px 0 40px 0;
+            font-size: 1.4em;
             font-style: italic;
+            letter-spacing: 2px;
         }
         .headshot {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             border: 3px solid var(--gold);
             object-fit: cover;
             display: block;
             margin: 0 auto;
-            box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.4);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
         }
         .container {
             max-width: 900px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
         h2 {
             border-bottom: 1px solid var(--gold);
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             color: var(--black);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 40px;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            font-weight: 700;
         }
         .pillar-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 30px 0;
         }
         .pillar-table th, .pillar-table td {
-            border: 1px solid #ddd;
-            padding: 15px;
+            border: 1px solid #eee;
+            padding: 20px;
             text-align: left;
         }
         .pillar-table th {
-            background-color: var(--off-white);
+            background-color: var(--black);
             color: var(--gold);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
         }
         .cta-section {
             background-color: var(--off-white);
-            padding: 40px;
+            padding: 60px 40px;
             text-align: center;
             border: 1px solid var(--gold);
-            margin-top: 40px;
+            margin-top: 60px;
         }
         .btn {
             background-color: var(--gold);
             color: var(--white);
-            padding: 15px 30px;
+            padding: 18px 35px;
             text-decoration: none;
             display: inline-block;
             font-weight: bold;
-            margin-top: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: var(--black);
+            color: var(--gold);
+            box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.4);
         }
         footer {
             text-align: center;
-            padding: 60px;
-            font-size: 0.9em;
-            color: #666;
-            background-color: var(--off-white);
-            margin-top: 60px;
+            padding: 80px 20px;
+            font-size: 0.85em;
+            color: #888;
+            background-color: var(--black);
+            margin-top: 80px;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -109,44 +125,49 @@
 
 <div class="container">
     <section>
-        <h2>Who We Are</h2>
-        <p>I am Liz, and Royal Home Curation Systems is an elite stewardship firm designed for the modern estate. As your dedicated Wardrobe and Home Systems Curator, I specialize in the high-stakes organization and maintenance of private residences.</p>
+        <h2>Stewardship of the Modern Estate</h2>
+        <p>I am Liz, and Royal Home Curation Systems is an elite stewardship firm designed for the modern estate. I specialize in the high-stakes organization and maintenance of private residences, focusing on the mastery of dressing suite architecture.</p>
     </section>
 
     <section>
-        <h2>The Four Pillars of Stewardship</h2>
+        <h2>The Four Pillars</h2>
         <table class="pillar-table">
-            <tr>
-                <th>Pillar</th>
-                <th>Focus</th>
-            </tr>
-            <tr>
-                <td><strong>Wardrobe Architecture</strong></td>
-                <td>Structural design and flow of specialized dressing suites.</td>
-            </tr>
-            <tr>
-                <td><strong>Estate Logistics</strong></td>
-                <td>Master-level management of the physical environment.</td>
-            </tr>
-            <tr>
-                <td><strong>Asset Archiving</strong></td>
-                <td>Precision tracking and digital inventory of high-value collections.</td>
-            </tr>
-            <tr>
-                <td><strong>Home Systems</strong></td>
-                <td>Creation of bespoke protocol and back-end manuals for the estate.</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Pillar</th>
+                    <th>Stewardship Focus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Wardrobe Architecture</strong></td>
+                    <td>Structural design and flow of specialized dressing suites.</td>
+                </tr>
+                <tr>
+                    <td><strong>Estate Logistics</strong></td>
+                    <td>Master-level management of the physical environment.</td>
+                </tr>
+                <tr>
+                    <td><strong>Asset Archiving</strong></td>
+                    <td>Precision tracking and digital inventory of high-value collections.</td>
+                </tr>
+                <tr>
+                    <td><strong>Home Systems</strong></td>
+                    <td>Creation of bespoke protocol and back-end manuals for the estate.</td>
+                </tr>
+            </tbody>
         </table>
     </section>
 
     <section class="cta-section">
         <h3>Request the Digital Brochure</h3>
-        <p>For a comprehensive guide to our services, pricing tiers, and project boundaries, download our private brochure.</p>
-        <a href="#" class="btn">DOWNLOAD BROCHURE (PDF)</a>
+        <p>Contact the front desk to receive a comprehensive guide to our services, investment tiers, and project boundaries.</p>
+        <a href="mailto:RoyalHCSFrontDesk@proton.mail?subject=Brochure Request&body=Hello, I would like to request the digital brochure for Royal Home Curation Systems." class="btn">Email for Brochure</a>
     </section>
 
     <section>
-        <h2>Inquire</h2>
+        <h2>Private Inquiry</h2>
+        <p>For inquiries regarding estate commissions or to book a private consultation, please contact our administrative desk.</p>
         <p>Email: <strong>RoyalHCSFrontDesk@proton.mail</strong></p>
     </section>
 </div>
